@@ -13,7 +13,7 @@ main .missed {
 }
 main .startText {
   font-size: 30px;
-  padding-top: 100px;
+  padding-top: 20px;
 }
 main .typing {
   display: none;
