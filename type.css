@@ -1,0 +1,41 @@
+main {
+  position: relative;
+  top: 50px;
+  left: 100px;
+  width: 600px;
+  height: 500px;
+  border-radius: 3px;
+  background-color: #55cdeb;
+  text-align: center;
+}
+main .missed {
+  background-color: red;
+}
+main .startText {
+  font-size: 30px;
+  padding-top: 200px;
+}
+main .typing {
+  display: none;
+}
+main .remaining {
+  color: white;
+  text-align: end;
+}
+main .text {
+  font-size: 35px;
+  padding-top: 150px;
+  margin-bottom: 20px;
+}
+main .alphabet-text {
+  font-size: 30px;
+}
+main .result {
+  padding-top: 100px;
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+main .extra {
+  font-size: 15px;
+}
