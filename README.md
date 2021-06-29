@@ -1,0 +1,1 @@
+# kyuukasuisei.github.io
