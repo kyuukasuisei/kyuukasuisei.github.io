@@ -1,0 +1,32 @@
+html {
+  background-image: url(images/seaStart.jpg);
+}
+html main {
+  background-image: url(images/seaStart.jpg);
+  text-align: center;
+}
+html main section {
+  background-color: #3273b4;
+  padding: 50px 0;
+  margin: 100px 15%;
+  border-radius: 15px;
+}
+html main section h1 {
+  color: white;
+}
+html main section div {
+  color: white;
+}
+html main section h2 {
+  color: white;
+  font-size: 25px;
+  padding: 5px 0 50px 0;
+}
+html main section button {
+  background-color: #51a9ff;
+  margin-top: 70px;
+  color: white;
+  padding: 5px 70px;
+  border-radius: 5px;
+  font-size: 20px;
+}
