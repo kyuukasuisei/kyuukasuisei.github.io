@@ -5,6 +5,7 @@
   const $remaining = $doc.getElementById("remaining")
   const $start = $doc.getElementById("start")
   const $typing = $doc.getElementById("typing")
+  const $Miss = $doc.getElementById("Miss")
   //spanの枠
   const $textAlpabet = $doc.getElementById("alpabetTxtCont")
   const $result = $doc.getElementById("result")
@@ -66,15 +67,17 @@
     window.addEventListener('DOMContentLoaded', () =>{
       window.addEventListener("keydown", (e) =>{
         e.preventDefault();
+        $textframe.classList.remove("missed")
         const typed = (e.key);
         //typingが正解だったら次の文字へ進める
-        if (typed === alpabetTextAll[textIndexDisplay][displayAlpabet]){
+        if (typed === alpabetTextAll[textIndexDisplay][displayAlpabet] && cheker === 1){
           console.log("success")
           $textDisplay_alpabet[displayAlpabet].style.color="orange";
           displayAlpabet++;
           score++;
+          $Miss.classList.remove("whenMiss");
           //一文終わっているか判定
-          if(displayAlpabet === alpabetTextAll[textIndexDisplay].length){
+          if(displayAlpabet === alpabetTextAll[textIndexDisplay].length && cheker === 1){
             displayAlpabet = 0;
             //textの内容を変える処理
             ($textDisplay_alpabet[textIndexDisplay])
@@ -106,12 +109,15 @@
             console.log(textIndexDisplay);
           }
         }
-        //点数つけるようで減点処理とかもできれば入れたい
+      //missしたときの処理
       else{
-        type(alpabetTextAll[textIndexDisplay]);
-        if (typed !== "n"){
+        type(alpabetTextAll[textIndexDisplay] && cheker === 1);
+        if (typed !== "n" && typed !== " "){
+          $textframe.classList.add("missed");
+          $Miss.classList.add("whenMiss");
           score=score-2;
           miss++;
+          console.log("miss")
         }
         }
       }
@@ -126,16 +132,7 @@
       if (typed ===" " && cheker === 0){
         $start.style.display="none";
         $typing.style.display="inline";
-        score =0;
-        displayAlpabet =0;
-        textIndexDisplay =0;
         cheker =1;
-        let n =0;
-        while( n < alpabetTextAll[textIndexDisplay].length){
-        $textDisplay_alpabet[n].style.color="black";
-        n++;
-      }
-        type();
       }
       else{
         getstart();
