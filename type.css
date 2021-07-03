@@ -50,7 +50,6 @@ main .alphabet-text {
   font-size: 30px;
 }
 main .result {
-  padding-top: 100px;
   font-size: 30px;
   color: white;
   display: none;
