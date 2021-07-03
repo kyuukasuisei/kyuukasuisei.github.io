@@ -1,15 +1,17 @@
+.missed {
+  background-color: #f38383;
+  transition: .5s;
+}
+
 main {
   position: relative;
   top: 50px;
   left: 100px;
   width: 600px;
   height: 500px;
+  background-color: #44ebeb;
   border-radius: 3px;
-  background-color: #55cdeb;
   text-align: center;
-}
-main .missed {
-  background-color: red;
 }
 main .startText {
   font-size: 30px;
@@ -19,19 +21,36 @@ main .typing {
   display: none;
 }
 main .remaining {
+  padding: 20px 20px 0 0;
   color: white;
   text-align: end;
 }
+main .Miss {
+  position: relative;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 250px;
+  font-family: serif;
+  color: white;
+  top: 300px;
+}
+main .whenMiss {
+  position: relative;
+  opacity: 1;
+  transition: .3s;
+  top: 50px;
+}
 main .text {
   font-size: 35px;
-  padding-top: 150px;
+  padding-top: 100px;
   margin-bottom: 20px;
 }
 main .alphabet-text {
   font-size: 30px;
 }
 main .result {
-  padding-top: 20px;
+  padding-top: 100px;
   font-size: 30px;
   color: white;
   display: none;
