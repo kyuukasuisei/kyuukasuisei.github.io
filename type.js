@@ -112,7 +112,7 @@
       //missしたときの処理
       else{
         type(alpabetTextAll[textIndexDisplay] && cheker === 1);
-        if (typed !== "n" && typed !== " "){
+        if (typed !== "n" && typed !== " " && cheker === 1){
           $textframe.classList.add("missed");
           $Miss.classList.add("whenMiss");
           score=score-2;
